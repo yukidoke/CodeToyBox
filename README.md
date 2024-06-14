@@ -1,2 +1,2 @@
-# ToyCodeBox
+# CodeToyBox
 (おもちゃ|ゴミ)箱
