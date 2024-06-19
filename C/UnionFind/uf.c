@@ -22,9 +22,9 @@ int root(UF *uf, int v_num) {
 
 // union by rank
 void merge(UF *uf, int a, int b) {
-	if(uf->_rank[a] < uf->_rank[b]) {int tmp = a;a = b;b = tmp;/* swap */}
+	if(uf->_rank[root(uf, a)] < uf->_rank[root(uf, b)]) {int tmp = a;a = b;b = tmp;/* swap */}
 	uf->ary[b] = root(uf, a);
-	if(uf->_rank[a] == uf->_rank[b]) uf->_rank[a]++;
+	if(uf->_rank[root(uf, a)] == uf->_rank[root(uf, b)]) uf->_rank[root(uf, a)]++;
 }
 
 
